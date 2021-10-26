@@ -2,10 +2,10 @@ package day02;
 
 public class Mathematics {
     public boolean isPrime(int number) {
-        if (number == 0 || number == 1) {
+        if (number <= 1) {
             return false;
         }
-        for (int i = 2; i <= (number / 2); i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if ((number % i) == 0) {
                 return false;
             }
