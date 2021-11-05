@@ -7,11 +7,11 @@ public class Journal {
     private List<String> students = new ArrayList<>();
 
     public boolean addStudent(String studentName) {
-        if (!studentName.contains(" ")) {
+        if (!studentName.trim().contains(" ")) {
             System.out.println("Hiányzó család vagy keresztnév!");
             return false;
         }
-        students.add(studentName);
+        students.add(studentName.trim());
         return true;
     }
 
